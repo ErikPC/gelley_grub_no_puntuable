@@ -19,6 +19,10 @@ public class Prices {
 
     }
 
+    public static Map<String, Double> getItems() {
+        return items;
+    }
+
     public static void display() {
         for (Map.Entry<String, Double> entry : items.entrySet()) {
             System.out.println("\t" + entry);

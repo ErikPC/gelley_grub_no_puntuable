@@ -6,12 +6,12 @@ public class Item implements Product {
     Double price;
     String extra = "null";
 
-    Item(String name, double price) {
+    public Item(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    Item(String name, double price, String extra) {
+    public Item(String name, double price, String extra) {
         this.name = name;
         this.price = price;
         this.extra = extra;
@@ -39,7 +39,7 @@ public class Item implements Product {
 
     @Override
     public String toString() {
-        return "nombre : " + name();
+        return name() + "...." + price() + "$";
     }
 
     @Override

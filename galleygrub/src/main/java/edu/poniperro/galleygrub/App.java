@@ -12,6 +12,8 @@ import edu.poniperro.galleygrub.order.Comanda;
 import edu.poniperro.galleygrub.order.Order;
 // import edu.poniperro.galleygrub.receipt.Receipt;
 // import edu.poniperro.galleygrub.receipt.Ticket;
+import edu.poniperro.galleygrub.receipt.Receipt;
+import edu.poniperro.galleygrub.receipt.Ticket;
 
 /**
  * 
@@ -125,9 +127,9 @@ public class App {
          * y lo muestra en pantalla.
          */
 
-        // Ticket receipt = new Receipt(order);
-        // receipt.total();
-        // receipt.print();
+        Ticket receipt = new Receipt(order);
+        receipt.total();
+        receipt.print();
 
         // /**
         // * Eugene H. Krabs quiere obtener un margen
@@ -144,18 +146,18 @@ public class App {
         // * pues eso lo haremos con otro componente.
         // */
 
-        // System.out.print("\n\t --- GALLEY GRUB --- \n");
+        System.out.print("\n\t --- GALLEY GRUB --- \n");
 
-        // patty = new Item("Krabby Patty", 1.25, "cheese");
-        // display(patty);
-        // bits = new Item("Coral Bits", 1.00, "medium");
-        // display(bits);
-        // rings = new Item("Kelp Rings", 1.50, "sauce");
-        // display(rings);
-        // loaf = new Item("Golden Loaf", 2.00, "sauce");
-        // display(loaf);
-        // soda = new Item("Seafoam Soda", 1.00, "large");
-        // display(soda);
+        patty = new Item("Krabby Patty", 1.25, "cheese");
+        display(patty);
+        bits = new Item("Coral Bits", 1.00, "medium");
+        display(bits);
+        rings = new Item("Kelp Rings", 1.50, "sauce");
+        display(rings);
+        loaf = new Item("Golden Loaf", 2.00, "sauce");
+        display(loaf);
+        soda = new Item("Seafoam Soda", 1.00, "large");
+        display(soda);
 
         // /**
         // * Buble Fish sigue zampando
@@ -163,14 +165,14 @@ public class App {
         // * de extras.
         // */
 
-        // order = new Order();
+        order = new Order();
 
-        // order.addItem("Krabby Patty", 1.25, "cheese");
-        // order.addItem("Coral Bits", 1.00);
-        // order.addItem("Kelp Rings", 1.50, "sauce");
-        // order.addItem("Golden Loaf", 2.00, "sauce");
-        // order.addItem("Seafoam Soda", 1.00, "large");
-        // order.addItem("Coral Bits", 1.00, "large");
+        order.addItem("Krabby Patty", 1.25, "cheese");
+        order.addItem("Coral Bits", 1.00);
+        order.addItem("Kelp Rings", 1.50, "sauce");
+        order.addItem("Golden Loaf", 2.00, "sauce");
+        order.addItem("Seafoam Soda", 1.00, "large");
+        order.addItem("Coral Bits", 1.00, "large");
 
         // // Utiliza el diccionario Prices para incluir
         // // el precio de los extras en la salida por consola.

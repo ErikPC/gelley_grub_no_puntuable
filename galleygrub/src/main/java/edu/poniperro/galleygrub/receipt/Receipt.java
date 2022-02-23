@@ -4,7 +4,7 @@ import edu.poniperro.galleygrub.order.Comanda;
 
 public class Receipt implements Ticket {
 
-    private Double total;
+    private Double total = 0.00;
     private Comanda order;
 
     public Receipt(Comanda comanda) {
@@ -24,6 +24,6 @@ public class Receipt implements Ticket {
     @Override
     public void print() {
         getOrder().display();
-        System.out.println("\tTOTAL-------->" + total());
+        System.out.println("\tTOTAL--------> " + String.format("%.2f", total()) + "$");
     }
 }

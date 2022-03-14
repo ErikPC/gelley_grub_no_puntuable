@@ -40,7 +40,7 @@ public class Order implements Comanda {
 
     @Override
     public void updateTotal(Double precio) {
-        this.total = precio;
+        this.total += precio;
     }
 
     @Override

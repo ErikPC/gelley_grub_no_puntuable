@@ -4,7 +4,7 @@ public class Item implements Product {
 
     String name;
     Double price;
-    String extra = "null";
+    String extra;
 
     public Item(String name, double price) {
         this.name = name;
@@ -30,7 +30,7 @@ public class Item implements Product {
     }
 
     public Boolean isRegular() {
-        if (extra() == "null") {
+        if (extra() == null) {
             return true;
         } else {
             return false;
@@ -39,7 +39,10 @@ public class Item implements Product {
 
     @Override
     public String toString() {
-        return name() + "...." + String.format("%.2f", price()) + "$";
+        return extra() == null ? name() + "...." + String.format("%.2f", price()) + "$"
+                : name() + " w/ " + extra() + "...." + String.format("%.2f", price()) + "$" + " + " +
+                        String.format("%.2f", Prices.priceOf(extra())) + "$";
+
     }
 
     @Override

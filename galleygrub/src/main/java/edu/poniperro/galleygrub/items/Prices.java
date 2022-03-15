@@ -23,6 +23,10 @@ public class Prices {
         return items;
     }
 
+    public static Double priceOf(String extra) {
+        return items.get(extra);
+    }
+
     public static void display() {
         for (Map.Entry<String, Double> entry : items.entrySet()) {
             System.out.println("\t" + entry);

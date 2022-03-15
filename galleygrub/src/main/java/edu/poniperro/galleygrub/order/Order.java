@@ -5,7 +5,7 @@ import java.util.List;
 import edu.poniperro.galleygrub.items.Item;
 
 public class Order implements Comanda {
-    private Double total;
+    private Double total = 0.0;
     private List<Item> items = new ArrayList<Item>();
 
     public Order() {
@@ -49,7 +49,7 @@ public class Order implements Comanda {
         System.out.println("\n \t--- ORDER ---");
         for (int i = 0; i < size(); i++) {
             Item item = items.get(i);
-            System.out.println("\t" + item.name() + "...." + String.format("%.2f", item.price()) + "$");
+            System.out.println("\t" + item);
         }
 
     }

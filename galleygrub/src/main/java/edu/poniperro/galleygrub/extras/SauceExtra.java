@@ -4,15 +4,13 @@ import edu.poniperro.galleygrub.order.Comanda;
 
 public class SauceExtra extends Extras {
 
-    private Double SAUCE_PRICE = 0.50;
-
     public SauceExtra() {
     };
 
     public void sumExtras(Comanda comanda) {
-        long total = comanda.intemList().stream().filter(i -> i.extra() == SAUCE).count();
+        long total = comanda.intemList().stream().filter(i -> i.extra() == ExtraPrices.SAUCE.getName()).count();
 
-        Double priceSauce = total * SAUCE_PRICE;
+        Double priceSauce = total * ExtraPrices.SAUCE.getPrice();
         comanda.updateTotal(priceSauce);
 
         nextExtra.ifPresent(e -> e.sumExtras(comanda));
